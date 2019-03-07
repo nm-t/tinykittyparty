@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+h2,
+p {
+    text-transform: lowercase;
+}
+
+input {
+    height: 50px;
+    padding: 1px 15px;
+    font-size: 30px;
+}
+
+button {
+    width: 56px;
+    height: 56px;
+    font-size: 33px;
+}
