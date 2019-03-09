@@ -1,12 +1,19 @@
 const express = require('express')
 const app = express()
+var path = require('path');
 const port = process.env.PORT || 8080
 
-app.get('/', (req, res) => res.send('Hello World!'))
+app.use(express.static(path.join(__dirname, '/assets')));
+
+app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname + '/index.html'));
+});
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
 
 
+
+/** 
 const { Client } = require('pg');
 
 const client = new Client({
@@ -23,3 +30,4 @@ client.query('SELECT table_schema,table_name FROM information_schema.tables;', (
   }
   client.end();
 });
+*/
